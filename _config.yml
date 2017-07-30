@@ -32,16 +32,16 @@ paginate_path: "page/:num/"
 
 # Comment
 comment:
-    disqus: vno-jekyll
+    disqus: yinengxiong
     # duoshuo: 
     
 # Social
 social:
-    weibo: onevcat
-    github: onevcat
-    twitter: onevcat
+    weibo: YinengXiong
+    github: YinengXiong
+    twitter: YinengXiong
     gplus: 107108267983477358170
-    mail: onev@onevcat.com
+    mail: xiongyineng0322@gmail.com
 
 # Google Analytics
 ga:
