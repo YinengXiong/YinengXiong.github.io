@@ -5,9 +5,35 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 31 Jul 2017 23:00:01 +0800</pubDate>
-    <lastBuildDate>Mon, 31 Jul 2017 23:00:01 +0800</lastBuildDate>
+    <pubDate>Tue, 01 Aug 2017 14:40:04 +0800</pubDate>
+    <lastBuildDate>Tue, 01 Aug 2017 14:40:04 +0800</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
+    
+      <item>
+        <title>Yineng Xiong's First Blog</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;惊喜不惊喜！意外不意外！还记得我是谁吗？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;大家好&quot;&gt;大家好！&lt;/h2&gt;
+
+&lt;p&gt;还记得我是谁吗？&lt;/p&gt;
+
+&lt;h2 id=&quot;是不是厉害炸了&quot;&gt;是不是厉害炸了&lt;/h2&gt;
+
+</description>
+        <pubDate>Tue, 01 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/08/01/hello-xyn/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/01/hello-xyn/</guid>
+        
+        <category>牛逼</category>
+        
+        <category>真的好厉害</category>
+        
+        <category>厉害炸了</category>
+        
+        
+      </item>
     
       <item>
         <title>Example Post</title>
@@ -748,9 +774,9 @@ Android’s source code is released by Google under open source licenses, althou
       </item>
     
       <item>
-        <title>Welcome to Hux Blog</title>
+        <title>Welcome to Yineng Xiong's Blog</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;“Yeah It’s on. ”&lt;/p&gt;
+  &lt;p&gt;“阿里巴巴是个快乐的青年”&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
@@ -816,9 +842,9 @@ Android’s source code is released by Google under open source licenses, althou
 
 &lt;p&gt;—— Hux 后记于 2015.10&lt;/p&gt;
 </description>
-        <pubDate>Thu, 29 Jan 2015 20:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/01/29/hello-2015/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/01/29/hello-2015/</guid>
+        <pubDate>Wed, 29 Jan 2014 21:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2014/01/29/hello-2015/</link>
+        <guid isPermaLink="true">http://localhost:4000/2014/01/29/hello-2015/</guid>
         
         <category>生活</category>
         

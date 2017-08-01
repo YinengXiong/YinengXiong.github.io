@@ -1,15 +1,15 @@
 ---
 layout:     post
-title:      "Welcome to Hux Blog"
-subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
-author:     "Hux"
-header-img: "img/post-bg-2015.jpg"
+title:      "Welcome to Yineng Xiong's Blog"
+subtitle:   "册那"
+date:       2014-01-29 13:00:00
+author:     "Yineng Xiong"
+header-img: "img/posttest.jpg"
 tags:
     - 生活
 ---
 
-> “Yeah It's on. ”
+> “阿里巴巴是个快乐的青年”
 
 
 ## 前言
