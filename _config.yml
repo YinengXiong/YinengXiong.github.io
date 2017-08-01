@@ -66,7 +66,7 @@ ga_domain: yinengxiong.cn
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "我来自**学院"
+sidebar-about-description: "**学院"
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
