@@ -10,9 +10,9 @@
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>Yineng Xiong's First Blog - Yineng Xiong's Blog</title>
+    <title>Build Personal Blog with Github & Jekyll - Yineng Xiong's Blog</title>
 
-    <link rel="canonical" href="http://localhost:4000/2017/08/01/hello-xyn/">
+    <link rel="canonical" href="http://localhost:4000/2017/08/02/build-blog/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -125,12 +125,12 @@
 
     <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="/img/style_1.jpg" width="0" height="0"> -->
+<!-- <img src="/img/2017-08-02.jpg" width="0" height="0"> -->
 
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/style_1.jpg')
+        background-image: url('/img/2017-08-02.jpg')
     }
 </style>
 <header class="intro-header" >
@@ -140,19 +140,17 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#牛逼" title="牛逼">牛逼</a>
+                        <a class="tag" href="/tags/#Github" title="Github">Github</a>
                         
-                        <a class="tag" href="/tags/#真的好厉害" title="真的好厉害">真的好厉害</a>
-                        
-                        <a class="tag" href="/tags/#厉害炸了" title="厉害炸了">厉害炸了</a>
+                        <a class="tag" href="/tags/#Jekyll" title="Jekyll">Jekyll</a>
                         
                     </div>
-                    <h1>Yineng Xiong's First Blog</h1>
+                    <h1>Build Personal Blog with Github & Jekyll</h1>
                     
                     
-                    <h2 class="subheading">老子回来了！</h2>
+                    <h2 class="subheading">唔册那</h2>
                     
-                    <span class="meta">Posted by Yineng Xiong on August 1, 2017</span>
+                    <span class="meta">Posted by Yineng Xiong on August 2, 2017</span>
                 </div>
             </div>
         </div>
@@ -171,20 +169,79 @@
                 post-container">
 
 				<blockquote>
-  <p>惊喜不惊喜！意外不意外！还记得我是谁吗？</p>
+  <p>Shape of 哇!</p>
 </blockquote>
 
-<h2 id="大家好">大家好！</h2>
+<h2 id="requirement">Requirement</h2>
 
-<p>还记得我是谁吗？</p>
+<ul>
+  <li>Github</li>
+  <li>Jekyll</li>
+</ul>
 
-<h2 id="是不是厉害炸了">是不是厉害炸了</h2>
+<ol>
+  <li>
+    <p><a href="https://github.com/">Github Pages</a> is where people build software. After registration,  <a href="https://github.com/new">create a new repository</a>. The name of repo should corresponding with Gighub account, like <code class="highlighter-rouge">***.github.io</code></p>
+  </li>
+  <li>
+    <p><a href="http://jekyllrb.com/">Jekyll</a> is a website generator that’s designed for building minimal, static blogs to be hosted on Github Pages. <a href="http://jekyll.com.cn/">Jekyll中文网站</a></p>
+  </li>
+</ol>
 
-<p>是的</p>
+<h2 id="choose-your-favourite-theme">Choose your favourite theme</h2>
 
-<h2 id="那赶紧留言一波吧">那赶紧留言一波吧</h2>
+<p><a href="http://jekyllthemes.org/">Jekyll Themes</a><br />
+Mine is <a href="https://github.com/huxpro/huxpro.github.io/">here</a></p>
 
-<p>需要翻墙</p>
+<h2 id="domain-registration">Domain Registration</h2>
+
+<ol>
+  <li>
+    <p><a href="https://wanwang.aliyun.com/">万网注册域名</a></p>
+  </li>
+  <li>
+    <p>Go to the root of your blog’s repo and edit the <strong>CNAME</strong> file to include your domain name (e.g. <code class="highlighter-rouge">yinengxiong.cn</code>)</p>
+  </li>
+  <li>
+    <p>Go to your domain name registrar and add <strong>CNAME DNS</strong> record pointing your domian to Github Pages</p>
+  </li>
+</ol>
+
+<h2 id="write-posts">Write Posts</h2>
+
+<p>Feel free to checkout <strong>Markdown</strong> files in the <code class="highlighter-rouge">_posts/</code></p>
+
+<p>The <strong>front-matter</strong> of a post should like:</p>
+
+<pre><code class="language-Shell">---
+layout:     post
+title:      "Hello"
+subtitle:   "Hello"
+date:       2017-08-22 14:00:00
+author:     "Yineng Xiong"
+header-img: "img/your-mum.jpg"
+tags:
+    - Alibaba
+---
+</code></pre>
+
+<h2 id="submit">Submit</h2>
+
+<p>Just <code class="highlighter-rouge">git push</code></p>
+
+<h2 id="current-function">Current function</h2>
+
+<ul>
+  <li>Comment (Using <a href="http://www.disqus.com/">Disqus</a>, 需要翻墙)</li>
+  <li>Tags search</li>
+  <li>Baidu Analytics</li>
+  <li>Google Analytics</li>
+  <li>Links</li>
+  <li><a href="https://twitter.com/YinengXiong">Twitter</a>, <a href="https://www.zhihu.com/people/YinengXiong">知乎</a>, <a href="http://weibo.com/yinengxiong">Weibo</a>, <a href="https://www.facebook.com/yinengxiong">Facebook</a>, <a href="https://github.com/YinengXiong">Github</a> pages</li>
+</ul>
+
+<h2 id="finally">Finally</h2>
+<p>Aha!</p>
 
 
                 <hr>
@@ -202,9 +259,9 @@
                 <!-- 多说评论框 start -->
                 <div class="comment">
                     <div class="ds-thread"
-                        data-thread-key="/2017/08/01/hello-xyn"
-                        data-title="Yineng Xiong's First Blog"
-                        data-url="http://localhost:4000/2017/08/01/hello-xyn/" >
+                        data-thread-key="/2017/08/02/build-blog"
+                        data-title="Build Personal Blog with Github & Jekyll"
+                        data-url="http://localhost:4000/2017/08/02/build-blog/" >
                     </div>
                 </div>
                 <!-- 多说评论框 end -->
@@ -232,8 +289,6 @@
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-        				
-                            
         				
                             
         				
@@ -286,8 +341,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "yinengxiong";
-    var disqus_identifier = "/2017/08/01/hello-xyn";
-    var disqus_url = "http://localhost:4000/2017/08/01/hello-xyn/";
+    var disqus_identifier = "/2017/08/02/build-blog";
+    var disqus_url = "http://localhost:4000/2017/08/02/build-blog/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

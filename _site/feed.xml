@@ -5,37 +5,94 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 02 Aug 2017 09:22:42 +0800</pubDate>
-    <lastBuildDate>Wed, 02 Aug 2017 09:22:42 +0800</lastBuildDate>
+    <pubDate>Wed, 02 Aug 2017 15:46:56 +0800</pubDate>
+    <lastBuildDate>Wed, 02 Aug 2017 15:46:56 +0800</lastBuildDate>
     <generator>Jekyll v3.5.1</generator>
     
       <item>
-        <title>Yineng Xiong's First Blog</title>
+        <title>Build Personal Blog with Github &amp; Jekyll</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;惊喜不惊喜！意外不意外！还记得我是谁吗？&lt;/p&gt;
+  &lt;p&gt;Shape of 哇!&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;大家好&quot;&gt;大家好！&lt;/h2&gt;
+&lt;h2 id=&quot;requirement&quot;&gt;Requirement&lt;/h2&gt;
 
-&lt;p&gt;还记得我是谁吗？&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Github&lt;/li&gt;
+  &lt;li&gt;Jekyll&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h2 id=&quot;是不是厉害炸了&quot;&gt;是不是厉害炸了&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/&quot;&gt;Github Pages&lt;/a&gt; is where people build software. After registration,  &lt;a href=&quot;https://github.com/new&quot;&gt;create a new repository&lt;/a&gt;. The name of repo should corresponding with Gighub account, like &lt;code class=&quot;highlighter-rouge&quot;&gt;***.github.io&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a website generator that’s designed for building minimal, static blogs to be hosted on Github Pages. &lt;a href=&quot;http://jekyll.com.cn/&quot;&gt;Jekyll中文网站&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;p&gt;是的&lt;/p&gt;
+&lt;h2 id=&quot;choose-your-favourite-theme&quot;&gt;Choose your favourite theme&lt;/h2&gt;
 
-&lt;h2 id=&quot;那赶紧留言一波吧&quot;&gt;那赶紧留言一波吧&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;&lt;br /&gt;
+Mine is &lt;a href=&quot;https://github.com/huxpro/huxpro.github.io/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;需要翻墙&lt;/p&gt;
+&lt;h2 id=&quot;domain-registration&quot;&gt;Domain Registration&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://wanwang.aliyun.com/&quot;&gt;万网注册域名&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to the root of your blog’s repo and edit the &lt;strong&gt;CNAME&lt;/strong&gt; file to include your domain name (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;yinengxiong.cn&lt;/code&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Go to your domain name registrar and add &lt;strong&gt;CNAME DNS&lt;/strong&gt; record pointing your domian to Github Pages&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;write-posts&quot;&gt;Write Posts&lt;/h2&gt;
+
+&lt;p&gt;Feel free to checkout &lt;strong&gt;Markdown&lt;/strong&gt; files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;front-matter&lt;/strong&gt; of a post should like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Shell&quot;&gt;---
+layout:     post
+title:      &quot;Hello&quot;
+subtitle:   &quot;Hello&quot;
+date:       2017-08-22 14:00:00
+author:     &quot;Yineng Xiong&quot;
+header-img: &quot;img/your-mum.jpg&quot;
+tags:
+    - Alibaba
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;submit&quot;&gt;Submit&lt;/h2&gt;
+
+&lt;p&gt;Just &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;current-function&quot;&gt;Current function&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Comment (Using &lt;a href=&quot;http://www.disqus.com/&quot;&gt;Disqus&lt;/a&gt;, 需要翻墙)&lt;/li&gt;
+  &lt;li&gt;Tags search&lt;/li&gt;
+  &lt;li&gt;Baidu Analytics&lt;/li&gt;
+  &lt;li&gt;Google Analytics&lt;/li&gt;
+  &lt;li&gt;Links&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://twitter.com/YinengXiong&quot;&gt;Twitter&lt;/a&gt;, &lt;a href=&quot;https://www.zhihu.com/people/YinengXiong&quot;&gt;知乎&lt;/a&gt;, &lt;a href=&quot;http://weibo.com/yinengxiong&quot;&gt;Weibo&lt;/a&gt;, &lt;a href=&quot;https://www.facebook.com/yinengxiong&quot;&gt;Facebook&lt;/a&gt;, &lt;a href=&quot;https://github.com/YinengXiong&quot;&gt;Github&lt;/a&gt; pages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;finally&quot;&gt;Finally&lt;/h2&gt;
+&lt;p&gt;Aha!&lt;/p&gt;
 </description>
-        <pubDate>Tue, 01 Aug 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/08/01/hello-xyn/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/08/01/hello-xyn/</guid>
+        <pubDate>Wed, 02 Aug 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/08/02/build-blog/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/02/build-blog/</guid>
         
-        <category>牛逼</category>
+        <category>Github</category>
         
-        <category>真的好厉害</category>
-        
-        <category>厉害炸了</category>
+        <category>Jekyll</category>
         
         
       </item>
