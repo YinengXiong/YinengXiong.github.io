@@ -5,9 +5,36 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 02 Aug 2017 15:46:56 +0800</pubDate>
-    <lastBuildDate>Wed, 02 Aug 2017 15:46:56 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.1</generator>
+    <pubDate>Thu, 01 Mar 2018 16:53:22 +0800</pubDate>
+    <lastBuildDate>Thu, 01 Mar 2018 16:53:22 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>MLND Graduated</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;这个可以秀一波&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;udacity-machine-learning-nanodegree&quot;&gt;Udacity Machine Learning Nanodegree&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/zhengshu.png&quot; alt=&quot;123&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;又要开学了&quot;&gt;又要开学了&lt;/h2&gt;
+&lt;p&gt;好气啊！&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Mar 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/03/01/graduate-mlnd/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/03/01/graduate-mlnd/</guid>
+        
+        <category>Machine Learning</category>
+        
+        <category>Deep Learning</category>
+        
+        <category>Udacity</category>
+        
+        <category>Kaggle</category>
+        
+        
+      </item>
     
       <item>
         <title>Build Personal Blog with Github &amp; Jekyll</title>
@@ -16,7 +43,6 @@
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;requirement&quot;&gt;Requirement&lt;/h2&gt;
-
 &lt;ul&gt;
   &lt;li&gt;Github&lt;/li&gt;
   &lt;li&gt;Jekyll&lt;/li&gt;
@@ -28,10 +54,9 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a website generator that’s designed for building minimal, static blogs to be hosted on Github Pages. &lt;a href=&quot;http://jekyll.com.cn/&quot;&gt;Jekyll中文网站&lt;/a&gt;&lt;/p&gt;
+    &lt;h2 id=&quot;choose-your-favourite-theme&quot;&gt;Choose your favourite theme&lt;/h2&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;h2 id=&quot;choose-your-favourite-theme&quot;&gt;Choose your favourite theme&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;&lt;br /&gt;
 Mine is &lt;a href=&quot;https://github.com/huxpro/huxpro.github.io/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
