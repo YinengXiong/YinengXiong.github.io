@@ -5,18 +5,55 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 01 Mar 2018 16:53:22 +0800</pubDate>
-    <lastBuildDate>Thu, 01 Mar 2018 16:53:22 +0800</lastBuildDate>
+    <pubDate>Thu, 01 Mar 2018 17:11:45 +0800</pubDate>
+    <lastBuildDate>Thu, 01 Mar 2018 17:11:45 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
-        <title>MLND Graduated</title>
+        <title>MLND graduated</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;这个可以秀一波&lt;/p&gt;
+  &lt;p&gt;First Step&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;udacity-machine-learning-nanodegree&quot;&gt;Udacity Machine Learning Nanodegree&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/zhengshu.png&quot; alt=&quot;123&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;capstone-project-results&quot;&gt;Capstone Project Results&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition&quot;&gt;Dogs_VS_Cats&lt;/a&gt;&lt;/strong&gt; On &lt;strong&gt;&lt;a href=&quot;https://www.kaggle.com/&quot;&gt;Kaggle&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Base Model/Model&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;LogLoss&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Ranking&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Inception V3&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.04095&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&amp;lt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Xception&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.04101&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;&amp;lt;20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Inception ResNet V2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.03796&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Merge&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;0.03582&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;7&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/kaggle.png&quot; alt=&quot;Result&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;虽然啊,比赛在做这个项目的时候已经结束了,但是还是可以 &lt;strong&gt;Late Submission&lt;/strong&gt;, 结果可以排在当时的第7&lt;/p&gt;
 
 &lt;h2 id=&quot;又要开学了&quot;&gt;又要开学了&lt;/h2&gt;
 &lt;p&gt;好气啊！&lt;/p&gt;
