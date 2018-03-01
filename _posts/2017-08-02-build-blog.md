@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Build Personal Blog with Github & Jekyll"
-subtitle:   "唔册那"
+subtitle:   " "
 date:       2017-08-02
 author:     "Yineng Xiong"
 header-img: "img/2017-08-02.jpg"
@@ -10,19 +10,19 @@ tags:
     - Jekyll
 ---
 
-> Shape of 哇!
+> <font size=5> Shape of 哇<font>!
 
 
 
 ## Requirement
-
+<font size=4>
 * Github
 * Jekyll
 
 1. [Github Pages](https://github.com/) is where people build software. After registration,  [create a new repository](https://github.com/new). The name of repo should corresponding with Gighub account, like `***.github.io`
 
 2. [Jekyll](http://jekyllrb.com/) is a website generator that's designed for building minimal, static blogs to be hosted on Github Pages. [Jekyll中文网站](http://jekyll.com.cn/)
-
+<font>
 ## Choose your favourite theme
 
 [Jekyll Themes](http://jekyllthemes.org/)<br>
