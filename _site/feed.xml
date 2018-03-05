@@ -5,12 +5,12 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 01 Mar 2018 22:17:44 +0800</pubDate>
-    <lastBuildDate>Thu, 01 Mar 2018 22:17:44 +0800</lastBuildDate>
-    <generator>Jekyll v3.5.2</generator>
+    <pubDate>Mon, 05 Mar 2018 21:59:32 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Mar 2018 21:59:32 +0800</lastBuildDate>
+    <generator>Jekyll v3.7.3</generator>
     
       <item>
-        <title>MLND graduated</title>
+        <title>My First Kaggle Competition</title>
         <description>&lt;blockquote&gt;
   &lt;p&gt;First Step&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -67,8 +67,6 @@
         <category>Deep Learning</category>
         
         <category>Udacity</category>
-        
-        <category>Kaggle</category>
         
         
       </item>

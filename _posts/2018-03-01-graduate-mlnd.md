@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "MLND graduated"
+title:      "My First Kaggle Competition"
 subtitle:   "Finally"
 date:       2018-03-01
 author:     "Yineng Xiong"
@@ -9,7 +9,6 @@ tags:
     - Machine Learning
     - Deep Learning
     - Udacity
-    - Kaggle
 ---
 
 > First Step
