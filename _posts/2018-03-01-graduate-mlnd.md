@@ -8,7 +8,6 @@ header-img: "img/2018-03-01.jpg"
 tags:
     - Machine Learning
     - Deep Learning
-    - Udacity
 ---
 
 > First Step
