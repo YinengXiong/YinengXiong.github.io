@@ -66,7 +66,7 @@ ga_domain: yinengxiong.cn
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "**学院"
+sidebar-about-description: "野鸡学院"
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
@@ -82,8 +82,9 @@ friends: [
     {
         title: "Google",
         href: "http://www.google.com"
-    },{
-        title: "Tongji University",
-        href: "http://www.tongji.edu.cn"
-    }
+    },
+    #{
+    #title: "Tongji University",
+    # href: "http://www.tongji.edu.cn"
+    #}
 ]
