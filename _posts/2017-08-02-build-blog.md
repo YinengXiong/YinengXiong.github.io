@@ -7,7 +7,6 @@ author:     "Yineng Xiong"
 header-img: "img/2017-08-02.jpg"
 tags:
     - Github Pages
-    - Jekyll
 ---
 
 > 哇!
