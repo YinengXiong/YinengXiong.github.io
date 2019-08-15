@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 15 Aug 2019 14:14:05 +0800</pubDate>
-    <lastBuildDate>Thu, 15 Aug 2019 14:14:05 +0800</lastBuildDate>
+    <pubDate>Thu, 15 Aug 2019 14:17:06 +0800</pubDate>
+    <lastBuildDate>Thu, 15 Aug 2019 14:17:06 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -77,8 +77,6 @@
         <link>http://localhost:4000/2018/03/01/graduate-mlnd/</link>
         <guid isPermaLink="true">http://localhost:4000/2018/03/01/graduate-mlnd/</guid>
         
-        <category>Machine Learning</category>
-        
         <category>Deep Learning</category>
         
         
@@ -87,7 +85,7 @@
       <item>
         <title>Build Personal Blog with Github &amp; Jekyll</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;Shape of 哇!&lt;/p&gt;
+  &lt;p&gt;哇!&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;requirement&quot;&gt;Requirement&lt;/h2&gt;
@@ -163,7 +161,7 @@ tags:
         <link>http://localhost:4000/2017/08/02/build-blog/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/08/02/build-blog/</guid>
         
-        <category>Github</category>
+        <category>Github Pages</category>
         
         <category>Jekyll</category>
         

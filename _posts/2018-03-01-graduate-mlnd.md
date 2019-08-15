@@ -6,7 +6,6 @@ date:       2018-03-01
 author:     "Yineng Xiong"
 header-img: "img/2018-03-01.jpg"
 tags:
-    - Machine Learning
     - Deep Learning
 ---
 

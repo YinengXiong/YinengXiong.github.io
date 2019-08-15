@@ -6,11 +6,11 @@ date:       2017-08-02
 author:     "Yineng Xiong"
 header-img: "img/2017-08-02.jpg"
 tags:
-    - Github
+    - Github Pages
     - Jekyll
 ---
 
-> Shape of 哇!
+> 哇!
 
 
 
