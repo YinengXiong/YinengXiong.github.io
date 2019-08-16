@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 16 Aug 2019 13:59:25 +0800</pubDate>
-    <lastBuildDate>Fri, 16 Aug 2019 13:59:25 +0800</lastBuildDate>
+    <pubDate>Fri, 16 Aug 2019 14:06:47 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Aug 2019 14:06:47 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -135,23 +135,25 @@
 &lt;p&gt;性能稍微差了一点, 正常&lt;/p&gt;
 
 &lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
-&lt;p&gt;看一下一些测试集上的效果 (卡了threshold的结果)
-&lt;img src=&quot;../img/2019-08-15/113044.jpg&quot; alt=&quot;1_rgb&quot; /&gt;
-&lt;img src=&quot;../img/2019-08-15/113044_pred.png&quot; alt=&quot;1_pred&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;看一下一些测试集上的效果 (卡了threshold的结果)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;2_rgb&quot; /&gt;
-&lt;img src=&quot;&quot; alt=&quot;2_pred&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/1_rgb.jpg&quot; alt=&quot;1_rgb&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/1_pred.png&quot; alt=&quot;1_pred&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;再看看破烂自然图像(小姐姐)的结果
-&lt;img src=&quot;&quot; alt=&quot;3_rgb&quot; /&gt;
-&lt;img src=&quot;&quot; alt=&quot;3_pred&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/2.jpg&quot; alt=&quot;2_rgb&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/2_pred.png&quot; alt=&quot;2_pred&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;4_rgb&quot; /&gt;
-&lt;img src=&quot;&quot; alt=&quot;4_pred&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;再看看破烂自然图像(小姐姐)的结果&lt;/p&gt;
 
-&lt;p&gt;感觉还不错哈&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/3_rgb.jpg&quot; alt=&quot;3_rgb&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/3_pred.png&quot; alt=&quot;3_pred&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;暑假学校还要干活还让不让找工作了滑稽&quot;&gt;暑假学校还要干活？还让不让找工作了(滑稽&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/salient_1.jpg&quot; alt=&quot;4_rgb&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/4_pred.png&quot; alt=&quot;4_pred&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;感觉效果还不错?&lt;/p&gt;
+
+&lt;h3 id=&quot;暑假学校还要干活还让不让找工作了滑稽&quot;&gt;暑假学校还要干活？还让不让找工作了(滑稽&lt;/h3&gt;
 &lt;p&gt;好气啊！&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Aug 2019 00:00:00 +0800</pubDate>
