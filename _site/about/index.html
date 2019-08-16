@@ -156,6 +156,7 @@
 <select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
     <option value="0" selected> 中文 Chinese </option>
     <option value="1"> 英语 English </option>
+    <option value="2"> 真正的 About </option>
 </select>
 
 <!-- Chinese Version -->
@@ -193,17 +194,34 @@
 
 </div>
 
+<!-- alibaba Version -->
+<div class="new post-container">
+
+    <p>
+		破烂地球物理专业，找工作中
+    </p>
+</div>
+
 <!-- Handle Language Change -->
 <script type="text/javascript">
     var $zh = document.querySelector(".zh");
     var $en = document.querySelector(".en");
+    var $new = document.querySelector(".new")
     function onLanChange(index){
         if(index == 0){
             $zh.style.display = "block";
             $en.style.display = "none";
-        }else{
+            $new.style.display = "none"
+        }
+        if(index == 1){
             $en.style.display = "block";
             $zh.style.display = "none";
+            $new.style.display = "none";
+        }
+        if(index == 2){
+            $en.style.display = "none";
+            $zh.style.display = "none";
+            $new.style.display = "block";
         }
     }
     onLanChange(0);
