@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 16 Aug 2019 14:06:47 +0800</pubDate>
-    <lastBuildDate>Fri, 16 Aug 2019 14:06:47 +0800</lastBuildDate>
+    <pubDate>Fri, 16 Aug 2019 14:12:40 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Aug 2019 14:12:40 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -140,7 +140,7 @@
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/1_rgb.jpg&quot; alt=&quot;1_rgb&quot; /&gt;
 &lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/1_pred.png&quot; alt=&quot;1_pred&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/2.jpg&quot; alt=&quot;2_rgb&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/2_rgb.jpg&quot; alt=&quot;2_rgb&quot; /&gt;
 &lt;img src=&quot;https://raw.githubusercontent.com/YinengXiong/YinengXiong.github.io/master/img/2019-08-15/2_pred.png&quot; alt=&quot;2_pred&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;再看看破烂自然图像(小姐姐)的结果&lt;/p&gt;
