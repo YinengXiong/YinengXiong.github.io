@@ -5,13 +5,154 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 15 Aug 2019 14:23:43 +0800</pubDate>
-    <lastBuildDate>Thu, 15 Aug 2019 14:23:43 +0800</lastBuildDate>
+    <pubDate>Fri, 16 Aug 2019 13:59:25 +0800</pubDate>
+    <lastBuildDate>Fri, 16 Aug 2019 13:59:25 +0800</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
-        <title>Salient Object Detection</title>
-        <description>&lt;h1 id=&quot;i-am-rubbish&quot;&gt;I am rubbish&lt;/h1&gt;
+        <title>CPD for Salient Object Detection</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;很久没有写 Blog 了, 今天写一波&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;salient-object-detection&quot;&gt;Salient Object Detection&lt;/h2&gt;
+
+&lt;p&gt;显著性检测的定义是检测出一张图片中最显著的物体, 其实就可以当作二分类分割问题. 看了几篇paper之后发现用到的网络其实也和语义分割的很相似, 都是&lt;code class=&quot;highlighter-rouge&quot;&gt;Encoder-Decoder&lt;/code&gt; 结构, 也有类似 &lt;code class=&quot;highlighter-rouge&quot;&gt;Attention&lt;/code&gt;、 &lt;code class=&quot;highlighter-rouge&quot;&gt;ASPP&lt;/code&gt; 这种 module, 于是拿来一篇 &lt;code class=&quot;highlighter-rouge&quot;&gt;CVPR 2019&lt;/code&gt; 的 Paper, 叫 &lt;a href=&quot;https://arxiv.org/abs/1904.08739&quot;&gt;Cascaded Partial Decoder&lt;/a&gt;. 文章宣称的是快速 SOD, &lt;code class=&quot;highlighter-rouge&quot;&gt;VGG Backbone&lt;/code&gt; 的速度可以达到 &lt;strong&gt;105 FPS&lt;/strong&gt;, 算是一个比较快的显著性网络。&lt;/p&gt;
+
+&lt;h2 id=&quot;why-so-fast&quot;&gt;Why So Fast？&lt;/h2&gt;
+&lt;p&gt;显著性检测其实和语义分割问题一样, 都依赖于网络提供精确的物体边界. 文章做了一个实验, 拿一张 Image 过一个VGG, 输出 &lt;code class=&quot;highlighter-rouge&quot;&gt;Activation Map&lt;/code&gt;, 发现网络的中间层依然可以保留比较准确的边缘信息, 那这样这些浅层的、分辨率高、抽象程度低的 feature 就不需要在 &lt;code class=&quot;highlighter-rouge&quot;&gt;Decoder&lt;/code&gt; 端使用, 这样就可以节省计算量。&lt;/p&gt;
+
+&lt;p&gt;然后在网络的设计上, 作者通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;Backbone&lt;/code&gt; 上拉出两个分支, 分别接上 &lt;code class=&quot;highlighter-rouge&quot;&gt;Partial Decoder&lt;/code&gt;, 第一个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Partial Decoder&lt;/code&gt; 得到初始的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Saliency Map&lt;/code&gt;, 通过 &lt;code class=&quot;highlighter-rouge&quot;&gt;HAM&lt;/code&gt; 生成更精细的第二个 &lt;code class=&quot;highlighter-rouge&quot;&gt;Saliency Map&lt;/code&gt;, 其实第一个可以看成生成的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Attention&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;为了加速, 每个&lt;code class=&quot;highlighter-rouge&quot;&gt;Decoder&lt;/code&gt;分支都先用 &lt;code class=&quot;highlighter-rouge&quot;&gt;1X1卷积&lt;/code&gt; 将通道数降到 &lt;code class=&quot;highlighter-rouge&quot;&gt;32&lt;/code&gt;, 然后文章里的 &lt;code class=&quot;highlighter-rouge&quot;&gt;RFB&lt;/code&gt; 多尺度, 其实就是类似 &lt;code class=&quot;highlighter-rouge&quot;&gt;Inception&lt;/code&gt; 的东西, 为了节省参数和降低计算量用到了把 &lt;code class=&quot;highlighter-rouge&quot;&gt;5X5卷积&lt;/code&gt; 替换为 &lt;code class=&quot;highlighter-rouge&quot;&gt;1X5&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;5X1&lt;/code&gt; 的操作, 最后再带上空洞卷积提升感受野.&lt;/p&gt;
+
+&lt;p&gt;训练的时候是同时监督两个分支的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Saliency Map&lt;/code&gt;，注意力分支为检测分支提供精确的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Attention Map&lt;/code&gt;, 检测分支反过来有助于注意力分支集中于显著对象.&lt;/p&gt;
+
+&lt;h2 id=&quot;training&quot;&gt;Training&lt;/h2&gt;
+&lt;p&gt;文章训练用的是 &lt;code class=&quot;highlighter-rouge&quot;&gt;DUTS-TR&lt;/code&gt;, 也是最常用的显著性数据集，测试用的也是最常见的 &lt;code class=&quot;highlighter-rouge&quot;&gt;ECSSD + HKU-IS + DUT-OMRON + DUTS-TE + PASCAL-S&lt;/code&gt; 的组合. 先复现一下原paper的精度, &lt;strong&gt;Loss&lt;/strong&gt; 就只放 &lt;strong&gt;MAE&lt;/strong&gt; 的&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Model&lt;br /&gt;BackBone&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Train&lt;br /&gt;Data&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;DUT&lt;br /&gt;OMRON&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;DUTS-TE&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;ECSSD&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;HKU-IS&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PASCAL-S&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;SOD&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CPD(paper)&lt;br /&gt;ResNet&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;DUTS-TE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.056&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.043&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.037&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.034&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.072&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CPD(复现)&lt;br /&gt;ResNet&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;DUTS-TE&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0549&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0433&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0429&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0336&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0756&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.1092&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;好像还行.&lt;/p&gt;
+
+&lt;p&gt;但是又不发paper, 为啥不多拿几个数据集放在一起训一波？&lt;/p&gt;
+
+&lt;p&gt;收集了一波显著性开源数据集, &lt;strong&gt;DUTS-TE + MSRA-B + HKU + NJU2K + MSRA10K&lt;/strong&gt;,操作起来&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Model&lt;br /&gt;BackBone&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Train&lt;br /&gt;Data&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;DUT&lt;br /&gt;OMRON&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;DUTS-TE&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;ECSSD&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;HKU-IS&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PASCAL-S&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;SOD&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CPD&lt;br /&gt;ResNet&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;DUTS+MSRA-B+&lt;br /&gt;HKU+NJU2K+MSRA10K&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0508&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0411&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.037&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0265&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0675&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.1032&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;有一些提升&lt;/p&gt;
+
+&lt;p&gt;那再快一点？把backbone改成 &lt;strong&gt;MobileNetV2&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Model&lt;br /&gt;BackBone&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Train&lt;br /&gt;Data&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;DUT&lt;br /&gt;OMRON&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;DUTS-TE&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;ECSSD&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;HKU-IS&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;PASCAL-S&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;SOD&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CPD&lt;br /&gt;MobileNetV2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;DUTS+MSRA-B+&lt;br /&gt;HKU+NJU2K+MSRA10K&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0545&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0485&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0389&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0289&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.0702&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0.1051&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;性能稍微差了一点, 正常&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+&lt;p&gt;看一下一些测试集上的效果 (卡了threshold的结果)
+&lt;img src=&quot;../img/2019-08-15/113044.jpg&quot; alt=&quot;1_rgb&quot; /&gt;
+&lt;img src=&quot;../img/2019-08-15/113044_pred.png&quot; alt=&quot;1_pred&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;2_rgb&quot; /&gt;
+&lt;img src=&quot;&quot; alt=&quot;2_pred&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;再看看破烂自然图像(小姐姐)的结果
+&lt;img src=&quot;&quot; alt=&quot;3_rgb&quot; /&gt;
+&lt;img src=&quot;&quot; alt=&quot;3_pred&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;4_rgb&quot; /&gt;
+&lt;img src=&quot;&quot; alt=&quot;4_pred&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;感觉还不错哈&lt;/p&gt;
+
+&lt;h2 id=&quot;暑假学校还要干活还让不让找工作了滑稽&quot;&gt;暑假学校还要干活？还让不让找工作了(滑稽&lt;/h2&gt;
+&lt;p&gt;好气啊！&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Aug 2019 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2019/08/15/cpd/</link>
