@@ -15,7 +15,6 @@ RSS: false
 weibo_username: yinengxiong
 zhihu_username: YinengXiong
 github_username: YinengXiong
-twitter_username:  YinengXiong
 facebook_username: YinengXiong
 
 
@@ -66,7 +65,7 @@ ga_domain: yinengxiong.cn
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "野鸡学院"
+sidebar-about-description: "小咸鱼"
 sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

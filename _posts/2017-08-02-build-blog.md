@@ -63,7 +63,7 @@ Just `git push`
 * Baidu Analytics
 * Google Analytics
 * Links
-* [Twitter](https://twitter.com/YinengXiong), [知乎](https://www.zhihu.com/people/YinengXiong), [Weibo](http://weibo.com/yinengxiong), [Facebook](https://www.facebook.com/yinengxiong), [Github](https://github.com/YinengXiong) pages
+* [知乎](https://www.zhihu.com/people/YinengXiong), [Weibo](http://weibo.com/yinengxiong), [Facebook](https://www.facebook.com/yinengxiong), [Github](https://github.com/YinengXiong) pages
 
 ## Finally
 Aha!
